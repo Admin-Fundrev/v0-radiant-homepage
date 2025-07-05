@@ -1,30 +1,52 @@
-# Radiant Homepage
+# Radiant
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Radiant is a [Tailwind Plus](https://tailwindcss.com/plus) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org), with a blog powered by [Sanity](https://www.sanity.io).
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/admin-fundrevais-projects/v0-radiant-homepage)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/5Ib9yKAjL4b)
+## Getting started
 
-## Overview
+To get started with this template, first install the npm dependencies:
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+```bash
+npm install
+```
 
-## Deployment
+Next, create a new Sanity project to power the blog within this template:
 
-Your project is live at:
+```bash
+npm create sanity@latest -- --env=.env.local --create-project "Radiant Blog" --dataset production
+```
 
-**[https://vercel.com/admin-fundrevais-projects/v0-radiant-homepage](https://vercel.com/admin-fundrevais-projects/v0-radiant-homepage)**
+This will prompt you to create a new Sanity account if you don't have one already. When asked "Would you like to add configuration files for a Sanity project in this Next.js folder?", choose "n".
 
-## Build your app
+Next, optionally import the demo seed data for the blog:
 
-Continue building your app on:
+```bash
+npx sanity@latest dataset import seed.tar.gz
+```
 
-**[https://v0.dev/chat/projects/5Ib9yKAjL4b](https://v0.dev/chat/projects/5Ib9yKAjL4b)**
+Next, run the development server:
 
-## How It Works
+```bash
+npm run dev
+```
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+
+To manage your blog content, visit the embedded Sanity Studio at [http://localhost:3000/studio](http://localhost:3000/studio).
+
+## Customizing
+
+You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+
+## License
+
+This site template is a commercial product and is licensed under the [Tailwind Plus license](https://tailwindcss.com/plus/license).
+
+## Learn more
+
+To learn more about the technologies used in this site template, see the following resources:
+
+- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
+- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
+- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+- [Sanity](https://www.sanity.io) - the Sanity website
